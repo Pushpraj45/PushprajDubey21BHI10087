@@ -60,31 +60,31 @@ Each piece in the game has its unique movement capability:
 Here are some previews of the game's user interface:
 
 - **Game Chat**: 
-  ![Game Chat](assets/UI%20Game%20chat.png)
+  ![Game Chat](Assets/UI%20Game%20chat.png)
 
 - **Chat Example 2**:
-  ![Chat Example](assets/UI-Chat2.png)
+  ![Chat Example](Assets/UI-Chat2.png)
 
 - **Client Connection Screen**:
-  ![Client Connection](assets/UI-clientconnection.png)
+  ![Client Connection](Assets/UI-clientconnection.png)
 
 - **Game Over Screen**:
-  ![Game Over](assets/UI-Gameover1.png)
+  ![Game Over](Assets/UI-Gameover1.png)
 
 - **Game Start Screen**:
-  ![Game Start](assets/UI-GameStart1.png)
+  ![Game Start](Assets/UI-GameStart1.png)
 
 - **History of Moves**:
-  ![History of Moves](assets/UI-historyofmoves1.png)
+  ![History of Moves](Assets/UI-historyofmoves1.png)
 
 - **Invalid Move Notification**:
-  ![Invalid Move](assets/UI-invalidmove1.png)
+  ![Invalid Move](Assets/UI-invalidmove1.png)
 
 - **Options Menu**:
-  ![Options Menu](assets/UI-Options1.png)
+  ![Options Menu](Assets/UI-Options1.png)
 
 - **Main Page**:
-  ![Main Page](assets/UI-Page1.png)
+  ![Main Page](Assets/UI-Page1.png)
 
 ## Getting Started
 
