@@ -1,0 +1,328 @@
+body {
+    font-family: 'Kalam', cursive;
+    background-color: #e5e1f5;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+ 
+
+#game-container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #120d18;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #00d4ff;
+}
+
+#player-selection h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.7em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #00d4ff;
+    color: #000;
+}
+
+.cell.selected {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.piece-A {
+    color: #31b1fb;
+}
+
+.piece-B {
+    color: #daf157;
+}
+
+#move-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#move-buttons button {
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+#move-buttons button:hover {
+    background-color: #00d4ff;
+    color: #000;
+}
+
+#piece-guide, #move-history {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#piece-guide h3, #move-history h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+#piece-guide ul, #history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#piece-guide ul li, #history-list li {
+    background-color: #2e2e2e;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#piece-guide ul li:hover, #history-list li:hover {
+    background-color: #007aff;
+}
+
+#history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+#game-status {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fffefb;
+}
+
+#player-selection {
+    margin-bottom: 20px;
+}
+
+#player-selection button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007aff;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#player-selection button:hover {
+    background-color: #00d4ff;
+    transform: scale(1.05);
+}
+
+#selected-piece {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#game-over-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #476fe6;
+}
+
+#new-game-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007aff;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#new-game-button:hover {
+    background-color: #00d4ff;
+    transform: scale(1.05);
+}
+/* Chat Section Styles */
+#chat-section {
+    width: 75%;
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 20px; /* Spacing from the main game section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chat-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+#chat-window {
+    background-color: #2c2c2c;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px solid #444;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chat-message.player-a {
+    background-color: #2668b3;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-message.player-b {
+    background-color: #256cab;
+    align-self: flex-start;
+    text-align: left;
+}
+
+#chat-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+#chat-input:focus {
+    border: 1px solid #888;
+    outline: none;
+}
+
+#send-chat {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #155195;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#send-chat:hover {
+    background-color: #2a70ae;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#send-chat:active {
+    background-color: #114c7f;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.chat-message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.chat-message.player-a {
+    background-color: #054e8f;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-message.player-b {
+    background-color: #054e8f;
+    align-self: flex-start;
+    text-align: left;
+}

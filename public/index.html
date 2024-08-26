@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chess-like Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Chess Strategy Game - 21BHI10087</h1>
+        
+        <div id="game-layout">
+            <div id="game-section">
+                <div id="player-selection">
+                    <h2>Choose Your Champion</h2>
+                    <button id="select-player-a">Champion A</button>
+                    <button id="select-player-b">Champion B</button>
+                </div>
+
+                <div id="game-status">Current Game Status</div>
+                
+                <div id="game-board"></div>
+                
+                <div id="move-controls">
+                    <div id="selected-piece">Selected Piece Info</div>
+                    <div id="move-buttons">Movement Options</div>
+                </div>
+                
+                <div id="piece-guide">
+                    <h3>Movement Guide</h3>
+                    <ul>
+                        <li>Pawn (P): Moves one step in any direction</li>
+                        <li>Hero1 (H1): Moves up to two steps in any direction (↑ ↓ ← →)</li>
+                        <li>Hero2 (H2): Moves up to two steps diagonally (↖ ↗ ↙ ↘)</li>
+                        <li>Hero3 (H3): Moves up to three steps in any direction</li>
+                    </ul>
+                </div>
+                
+                <div id="move-history">
+                    <h3>History of Moves</h3>
+                    <ul id="history-list"></ul>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div id="chat-section">
+                <h3>In-Game Chat</h3>
+                <div id="chat-window">
+                    <!-- Example chat messages -->
+                    <div class="chat-message player-a">Player A has entered the arena!</div>
+                    <div class="chat-message player-b">Player B is ready for action!</div>
+                </div>
+
+                <input type="text" id="chat-input" placeholder="Enter your message...">
+                <button id="send-chat">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="game-over-message">Game Over! Well played!</h2>
+            <button id="new-game-button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
