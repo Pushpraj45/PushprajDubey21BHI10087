@@ -1,4 +1,4 @@
-# Advanced Chess-like Game
+# Chess-like Game
 
 Welcome to the Chess-like Game! This project is a unique twist on traditional chess, featuring custom gameplay mechanics, an integrated chat system, and a modern user interface.
 
@@ -91,5 +91,4 @@ Here are some previews of the game's user interface:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/advanced-chess-like-game.git
-cd advanced-chess-like-game
+git clone https://github.com/Pushpraj45/PushprajDubey21BHI10087.git
