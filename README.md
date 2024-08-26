@@ -30,7 +30,7 @@ This game allows two players to engage in a strategic battle where each piece ha
 
 ## Gameplay Instructions
 
-### Option 1: Play via Deployed Link
+### Option 1: Play via Deployed Link - https://pushprajdubey21bhi10087.onrender.com/
 
 1. Open the deployed link (e.g., on Render) in **two separate browser tabs**.
 2. In the first tab, select **Player A** by clicking the corresponding button.
